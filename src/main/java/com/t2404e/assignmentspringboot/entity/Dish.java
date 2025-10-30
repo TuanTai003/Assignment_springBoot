@@ -22,10 +22,9 @@ public class Dish {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // --- Many-to-One ---
-    // Dish là bên sở hữu quan hệ (chứa khóa ngoại)
-    @ManyToOne(fetch = FetchType.LAZY) // LAZY: chỉ load User khi thực sự cần đến
-    @JoinColumn(name = "category_id") // Tạo cột author_id trong bảng posts
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
     @JsonBackReference
     private Category category;
 

@@ -14,7 +14,7 @@ public class CategoryService {
     private CategoryRepository categoryRepository;
 
     public List<Category> findAll() {
-        // bổ sung logic sau vào đây.
+
         return categoryRepository.findAll();
     }
 }

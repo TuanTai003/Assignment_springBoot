@@ -21,8 +21,8 @@ public class Category {
 
     @OneToMany(
             mappedBy = "category",
-            cascade = CascadeType.ALL, // Thao tác trên User sẽ ảnh hưởng đến các Post của nó
-            orphanRemoval = true // Nếu một Dish bị xóa khỏi list này, nó sẽ bị xóa khỏi DB
+            cascade = CascadeType.ALL,
+            orphanRemoval = true
     )
     @JsonManagedReference
     private List<Dish> dishes = new ArrayList<>();

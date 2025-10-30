@@ -28,7 +28,7 @@ public class DishController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int limit
     ) {
-        // validate
+
         Page<Dish> dishes = dishService.findAll(keyword, categoryId, status, minPrice, maxPrice, sortBy, sortDir, page, limit);
         return dishes;
     }
